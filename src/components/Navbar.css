@@ -47,13 +47,13 @@
     }
 
     .nav-menu {
-        position: absolute;
+        position:absolute;
         flex-direction: column;
         justify-content: start;
         top: 90px;
-        right: -100%;
+        right:100%;
         width: 50%;
-        height: 100vh;
+        height: 50vh;
         transition: 0.4s;
         z-index: 2;
         background: #fff;
@@ -61,7 +61,7 @@
     }
 
     .nav-menu.active {
-        right: 0;
+        left:0;
     }
 
     .nav-menu li {
@@ -74,8 +74,3 @@
         font-size: 1.2rem;
     }
 }
-
-
-
-
-
