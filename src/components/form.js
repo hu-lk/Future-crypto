@@ -7,13 +7,12 @@ import './Form.css'
 function Form() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState('');
+  const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false'
+
 
   useEffect(() => {
     axios
-      .get(
-        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false'
-      )
-      .then(res => {
+      .get(url).then(res => {
         setCoins(res.data);
         console.log(res.data);
       })
@@ -41,6 +40,7 @@ function Form() {
           />
         </form>
       </div>
+      <div >
       {filteredCoins.map(coin => {
         return (
           <Coin
@@ -55,6 +55,7 @@ function Form() {
           />
         );
       })}
+      </div>
     </div>
   );
 }
