@@ -12,14 +12,13 @@
     align-items: center;
     height: 80px;
     border-bottom: 1px solid #d7d7d7;
-    width: 900px;
+    width: auto;
   }
   
   .coin {
     display: flex;
     align-items: center;
     padding-right: 24px;
-  
     min-width: 300px;
   }
   
@@ -74,4 +73,9 @@
   .green {
     color: #11d811;
   }
-  
+  @media screen and (max-width:768px){
+    .coin-row {
+      margin-left: 679px;
+    }
+    
+  }
